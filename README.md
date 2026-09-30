@@ -1,15 +1,19 @@
-# Magical Creature Club — Connected Prototype
+# Magical Creature Club — Google Sheets Connected
 
-This version uses the user's uploaded BEASTS.csv as the bundled data source and includes a button to sync from the published Google Sheets CSV.
+This version is configured with the user's published Google Sheets CSV URL.
 
 Google Sheets CSV:
 https://docs.google.com/spreadsheets/d/e/2PACX-1vS6ATu1MX6uUYNJg7gZjS8FRMqFLNwc2GZyHsejsJbuzEENQzwD8Tf-ObUy8mp0drVau6S2xLt090Jr/pub?gid=0&single=true&output=csv
 
-Files:
-- index.html
-- styles.css
-- BEASTS.csv
+How it works:
+1. Open the web app.
+2. The app attempts to fetch the latest CREATURES data from Google Sheets.
+3. Press “↻ ซิงก์ข้อมูลจาก Google Sheets” to refresh manually.
+4. If Google Sheets cannot be reached, the app falls back to BEASTS.csv bundled with the site.
 
-Open index.html in a browser. The page will display the 7 creature records from the uploaded CSV immediately. If the browser permits fetching the published CSV, use "ซิงก์ข้อมูลจาก Google Sheets" to refresh from the live sheet.
+For GitHub Pages:
+- Upload the files in this folder to the repository root.
+- Enable Settings > Pages > Deploy from branch > main > /(root).
+- Open the generated Pages URL.
 
-The Image column is supported. Add image URLs later and they will appear in creature cards/details.
+Note: The remote Google Sheets connection can only be verified after the site is served over HTTP/HTTPS. Opening index.html directly from a file:// URL may be blocked by browser CORS rules.
