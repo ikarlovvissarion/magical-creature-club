@@ -1,4 +1,4 @@
-# Magical Creature Club — Google Sheets Connected
+# Mystical Beasts Alliance — Google Sheets Connected
 
 This version is configured with the user's published Google Sheets CSV URL.
 
@@ -7,7 +7,7 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vS6ATu1MX6uUYNJg7gZjS8FRMqFLNwc2
 
 How it works:
 1. Open the web app.
-2. The app attempts to fetch the latest CREATURES data from Google Sheets.
+2. The app attempts to fetch the latest BEASTS data from Google Sheets.
 3. Press “↻ ซิงก์ข้อมูลจาก Google Sheets” to refresh manually.
 4. If Google Sheets cannot be reached, the app falls back to BEASTS.csv bundled with the site.
 

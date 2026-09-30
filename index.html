@@ -9,12 +9,12 @@
 </head>
 <body>
 <header class="topbar">
-<button class="brand" onclick="showPage('home')"><span class="seal">✦</span><span><b>Mystical Beasts Alliance</b><small>CLUB DATABASE</small></span></button>
+<button class="brand" onclick="showPage('home')"><span class="seal">✦</span><span><b>MYSTICAL BEASTS</b><small>CLUB DATABASE</small></span></button>
 <nav><button onclick="showPage('home')">HOME</button><button onclick="showPage('beasts')">BEASTS</button><button onclick="showPage('greenhouse')">GREENHOUSE</button></nav>
 </header>
 <main>
 <section id="home" class="page active">
-<div class="hero"><div class="ornament">✦ ───────── ✦</div><p class="eyebrow">CENTRAL REFERENCE ARCHIVE</p><h1>Mystical Beasts Alliance<br><em>Club</em></h1><p>ฐานข้อมูลกลางสำหรับสัตว์วิเศษภายในคอกและพืชผักในแปลง</p></div>
+<div class="hero"><div class="ornament">✦ ───────── ✦</div><p class="eyebrow">CENTRAL REFERENCE ARCHIVE</p><h1>Mystical Beast<br><em>Club</em></h1><p>ฐานข้อมูลกลางสำหรับสัตว์วิเศษภายในคอกและพืชในโรงเรียน</p></div>
 <div class="summary-grid">
 <button class="summary-card" onclick="showPage('beasts')">🐾<b id="creatureCount">0</b><small>BEASTS</small></button>
 <button class="summary-card" onclick="showPage('greenhouse')">🌿<b id="plantCount">0</b><small>GREENHOUSE</small></button>
@@ -36,7 +36,7 @@ const img=(src,label,emoji)=>src?`<img src="${esc(src)}" alt="${esc(label)}">`:`
 function showPage(id){document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");scrollTo({top:0,behavior:"smooth"})}
 function render(){
 creatureCount.textContent=beasts.length;plantCount.textContent=plants.length;creatureTotal.textContent=beasts.length;plantTotal.textContent=plants.length;
-creatureGrid.innerHTML=beasts.map((c,i)=>`<button class="creature-card" onclick="openCreature(${i})"><div class="card-image">${img(c.Image,c.Name,"🐾")}</div><div class="card-body"><span class="tag">${esc(c.ID)}</span><h3>${esc(c.Name)}</h3><p>${esc(c.Species)} · ${esc(c.Breed)}</p><span class="status">${esc(c.Classification || "Magical Creature")}</span></div></button>`).join("");
+creatureGrid.innerHTML=beasts.map((c,i)=>`<button class="creature-card" onclick="openCreature(${i})"><div class="card-image">${img(c.Image,c.Name,"🐾")}</div><div class="card-body"><span class="tag">${esc(c.ID)}</span><h3>${esc(c.Name)}</h3><p>${esc(c.Species)} · ${esc(c.Breed)}</p><span class="status">${esc(c.Classification || "Mystical Beast")}</span></div></button>`).join("");
 }
 function openCreature(i){const c=beasts[i];modalContent.innerHTML=`<div class="modal-image">${img(c.Image,c.Name,"🐾")}</div><p class="eyebrow">${esc(c.ID)} · ${esc(c.Species)}</p><h2>${esc(c.Name)}</h2><div class="detail-grid">
 <div><small>BREED</small><b>${esc(c.Breed)}</b></div><div><small>SEX</small><b>${esc(c.Sex)}</b></div>
